@@ -22,10 +22,10 @@
 
 I will be using an object to implement the data we need:
 
-Places {
-   name: string
-   city: string
-   state: string
-   cuisines: string
-   pic: string
-}
+Places {\
+   name: string,\
+   city: string,\
+   state: string,\
+   cuisines: string,\
+   pic: string\
+}\
