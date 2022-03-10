@@ -1,6 +1,8 @@
 # Project REST-Rant
 
-REST-Rant is an app where users can review restaurants.
+## REST-Rant is an app where users can review restaurants.
+
+### Route Table
 
 | Method | Path | Purpose |
 |:-:|:-:|:-:|
@@ -15,3 +17,15 @@ REST-Rant is an app where users can review restaurants.
 | POST | /places/:id/rant | Create a rant (comment) about a particular place |
 | DELETE | /places/:id/rant/:rantId | Delete a rant (comment) about a particular place |
 | GET | * | 404 page (matches any route not defined above) |
+
+### Data Structure
+
+I will be using an object to implement the data we need:
+
+Places {
+   name: string
+   city: string
+   state: string
+   cuisines: string
+   pic: string
+}
