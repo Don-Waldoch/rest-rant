@@ -24,8 +24,8 @@ I will be using an object to implement the data we need:
 
 Places {\
 &emsp;name: string,\
-    city: string,\
-    state: string,\
-    cuisines: string,\
-    pic: string\
+&emsp;city: string,\
+&emsp;state: string,\
+&emsp;cuisines: string,\
+&emsp;pic: string\
 }
