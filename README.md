@@ -23,7 +23,7 @@
 I will be using an object to implement the data we need:
 
 Places {\
-    name: string,\
+&emsp;name: string,\
     city: string,\
     state: string,\
     cuisines: string,\
