@@ -4,8 +4,8 @@ const Def = require('./default')
 function home () {
   return (
     <Def>
-      <main>
-        <h1>HOME</h1>
+      <main className="text-center">
+        <h1>REST-Rant</h1>
         <div>
           <img src="/images/ivan-torres-MQUqbmszGGM-unsplash.jpg" alt="Pizza Pic" />
           <div>
