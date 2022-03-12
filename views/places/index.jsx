@@ -19,9 +19,11 @@ function index (data) {
   return (
     <Def>
       <main>
-        <h1 className="text-center">Places to Rant or Rave About</h1>
+        <div className="container">
+        <h1 className="text-start">Places to Rant or Rave About</h1>
         <div className="row">
           {placesFormatted}
+        </div>
         </div>
       </main>
     </Def>
