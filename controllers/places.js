@@ -18,7 +18,8 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-  res.send('<h1>Show Page POST</h1>')
+  console.log(req.body)
+  res.send('POST /places')
 })
 
 router.get('/new', (req, res) => {
