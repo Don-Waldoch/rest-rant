@@ -1,3 +1,5 @@
+// Globally available places data
+
 module.exports = [{
     name: 'H-Thai-ML',
     city: 'Seattle',
