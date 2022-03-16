@@ -6,6 +6,7 @@ body {
 main {
   margin-right: 20px;
   margin-left: 20px;
+  padding-top: 20px;
   background-color: white;
 }
 
@@ -13,7 +14,16 @@ h1 {
   color: cornflowerblue;
 }
 
-img {
+h2 {
+  color: #9CD7E7;
+}
+
+.fullwidth {
+  max-width: 100%;
+  height: auto;
+}
+
+.halfwidth {
   max-width: 50%;
   height: auto;
 }

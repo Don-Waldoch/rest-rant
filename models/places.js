@@ -5,7 +5,7 @@ module.exports = [{
     city: 'Seattle',
     state: 'WA',
     cuisines: 'Thai, Pan-Asian',
-    pic: 'images/kisspng-coffee-cup-cat-cafe-kopi-luwak-coffee-cups-and-cat-decorations-5aa789619725c8.1235123015209291216191.png'
+    pic: 'images/max-griss-YpfRCe5lda0-unsplash.jpg'
 }, {
     name: 'Coding Cat Cafe',
     city: 'Phoenix',
