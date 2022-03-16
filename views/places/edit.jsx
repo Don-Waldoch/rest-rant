@@ -2,14 +2,13 @@ const React = require('react')
 const Def = require('../default')
 
 function edit_form (data) {
-  console.log(data.place)
+  console.log(data)
   return (
     <Def>
       <main>
         <div className="container">
         <h1>Add a New Place</h1>
         <form method="POST" action={`/places/${data.id}?_method=PUT`}>
-
           <div className="row">
             <div className="form-group col-sm-6">
               <label htmlFor="name">Place Name</label>
@@ -35,7 +34,7 @@ function edit_form (data) {
             <input className="form-control" id="cuisines" name="cuisines" defaultValue={data.place.cuisines} required />
           </div>
           <br></br>
-          <input className="btn btn-primary" type="submit" value="Add Place" />
+          <input className="btn btn-primary" type="submit" value="Save Place" />
         </form>
         </div>
       </main>
