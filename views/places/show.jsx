@@ -2,14 +2,14 @@ const React = require('react')
 const Def = require('../default')
 
 function show (data) {
-  // console.log(data)
+  let image = (data.place.pic.match(/^images/)) ? `../${data.place.pic}` : data.place.pic
   return (
     <Def>
       <main>
       <div className='container'>
         <div className='row'>
           <div className='col-6'>
-            <img className='fullwidth' src={`../${data.place.pic}`} alt={data.place.name} />
+            <img className='fullwidth' src={image} alt={data.place.name} />
           </div>
           <div className='col-6'>
             <h1>{ data.place.name }</h1>

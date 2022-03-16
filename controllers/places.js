@@ -45,7 +45,17 @@ router.post('/', (req, res) => {
 
 // DELETE route
 router.delete('/:id', (req, res) => {
-  res.send('<h1>Delete Page Stub</h1>')
+  let id = Number(req.params.id)
+  if (isNaN(id)) {
+    res.render('error404')
+  }
+  else if (!places[id]) {
+    res.render('error404')
+  }
+  else {
+    places.splice(id, 1)
+    res.redirect('/places')
+  }
 })
 
 module.exports = router
