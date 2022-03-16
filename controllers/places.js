@@ -1,11 +1,32 @@
 const router = require('express').Router()
 const places = require('../models/places.js')
 
+router.get('/new', (req, res) => {
+  res.render('places/new')
+})
+
+router.get('/:id/edit', (req, res) => {
+  res.send('<h1>Edit Page Stub</h1>')
+})
+
+router.get('/:id', (req, res) => {
+  let id = Number(req.params.id)
+  if (isNaN(id)) {
+    res.render('error404')
+  }
+  else if (!places[id]) {
+    res.render('error404')
+  }
+  else {
+    res.render('places/show', { place: places[id], id })
+  }
+})
+
 router.get('/', (req, res) => {
   res.render('places/index', {places})
 })
 
-// POSt route
+// POST route
 router.post('/', (req, res) => {
   // console.log(req.body)
   if (!req.body.pic) {
@@ -22,25 +43,9 @@ router.post('/', (req, res) => {
   res.redirect('/places')
 })
 
-router.get('/:id', (req, res) => {
-  let id = Number(req.params.id)
-  if (isNaN(id)) {
-    res.render('error404')
-  }
-  else if (!places[id]) {
-    res.render('error404')
-  }
-  else {
-    res.render('places/show', { place: places[id] })
-  }
-})
-
-router.get('/new', (req, res) => {
-  res.render('places/new')
-})
-
-router.get('/edit', (req, res) => {
-  res.send('<h1>Edit Page GET</h1>')
+// DELETE route
+router.delete('/:id', (req, res) => {
+  res.send('<h1>Delete Page Stub</h1>')
 })
 
 module.exports = router
