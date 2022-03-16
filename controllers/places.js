@@ -22,12 +22,21 @@ router.post('/', (req, res) => {
   res.redirect('/places')
 })
 
-router.get('/new', (req, res) => {
-  res.render('places/new')
+router.get('/:id', (req, res) => {
+  let id = Number(req.params.id)
+  if (isNaN(id)) {
+    res.render('error404')
+  }
+  else if (!places[id]) {
+    res.render('error404')
+  }
+  else {
+    res.render('places/show', { place: places[id] })
+  }
 })
 
-router.get('/show', (req, res) => {
-  res.send('<h1>Show Page GET</h1>')
+router.get('/new', (req, res) => {
+  res.render('places/new')
 })
 
 router.get('/edit', (req, res) => {
