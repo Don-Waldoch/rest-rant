@@ -17,6 +17,7 @@ function show (data) {
             <p className="text-center">Not Rated</p>
             <h2>Description</h2>
             <p className="text-center">Located in {data.place.city}, {data.place.state}</p>
+            <p className="text-center">Founded in {data.place.founded}</p>
           </div>
         </div>
         <div className='row'>
