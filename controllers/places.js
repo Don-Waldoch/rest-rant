@@ -1,3 +1,5 @@
+//Start connecting to Mongoos/MongoDB
+
 const router = require('express').Router()
 const db = require('../models')
 
