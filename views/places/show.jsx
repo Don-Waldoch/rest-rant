@@ -10,14 +10,26 @@ function show (data) {
         <div className='row'>
           <div className='col-6'>
             <img className='fullwidth' src={image} alt={data.place.name} />
+            <h3>Located in {data.place.city}, {data.place.state}</h3>
           </div>
           <div className='col-6'>
             <h1>{ data.place.name }</h1>
             <h2>Rating</h2>
             <p className="text-center">Not Rated</p>
             <h2>Description</h2>
-            <p className="text-center">Located in {data.place.city}, {data.place.state}</p>
-            <p className="text-center">Founded in {data.place.founded}</p>
+            <h3>{data.place.showEstablished()}</h3>
+            <h4>Serving {data.place.cuisines}</h4>
+            <div className='row'>
+            <div className='col-4'></div>
+            <div className='col-2'>
+              <a href={`/places/${data.id}/edit`} className="btn btn-warning">Edit</a>
+              </div>
+              <div className='col-2'>
+              <form method="POST" action={`/places/${data.id}?_method=DELETE`}> 
+                <button type="submit" className="btn btn-danger">Delete</button>
+              </form>
+              </div>
+            </div>
           </div>
         </div>
         <div className='row'>
@@ -26,15 +38,7 @@ function show (data) {
           </div>
         </div>
         <div className='row'>
-          <div className='col-1'>
-          <a href={`/places/${data.id}/edit`} className="btn btn-warning">Edit</a>
-          </div>
-          <div className='col-1'>
-            <form method="POST" action={`/places/${data.id}?_method=DELETE`}> 
-              <button type="submit" className="btn btn-danger">Delete</button>
-            </form>
-          </div>
-          <div className='col-10'>
+          <div className='col-12'>
             <h2>Comments</h2>
             <p className="text-center">No comments yet!</p>
           </div>
