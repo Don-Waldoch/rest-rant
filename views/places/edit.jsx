@@ -2,7 +2,7 @@ const React = require('react')
 const Def = require('../default')
 
 function edit_form (data) {
-  console.log(data)
+  //console.log(data)
   return (
     <Def>
       <main>
