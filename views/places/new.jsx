@@ -20,8 +20,8 @@ function new_form (data) {
     Name     = data.body.name
     Pic      = data.body.pic
     City     = data.body.city
-    State    = data.body.name
-    Cuisines = data.body.state
+    State    = data.body.state
+    Cuisines = data.body.cuisines
     Founded  = data.body.founded
   }
   return (
