@@ -2,6 +2,7 @@ const React = require('react')
 const Def = require('../default')
 
 function show (data) {
+  // console.log(data)
   let image = (data.place.pic.match(/^images/)) ? `../${data.place.pic}` : data.place.pic
   let comments = (
     <h3 className="inactive">
@@ -63,21 +64,21 @@ function show (data) {
           </div>
           <p></p><hr></hr>
           <h2>Got Your Own Rant or Rave?</h2>
-          <form method="POST" action="/comment">
-            <div class="mb-3 row">
-              <div class="col-12">
-                <label for="inputComment" class="form-label">Comment</label>
-                <textarea type="text" class="form-control" id="inputComment" rows="2"/>
+          <form method="POST" action={`/places/${data.id}/comment`}>
+            <div className="mb-3 row">
+              <div className="col-12">
+                <label htmlFor="content" className="form-label">Content</label>
+                <textarea type="text" className="form-control" id="content" name="content" rows="2"/>
               </div>
             </div>
-            <div class="mb-3 row">
-              <div class="col-md-6">
-                <label for="inputAuthor" class="form-label">Author</label>
-                <input type="text" class="form-control" id="inputAuthor"/>
+            <div className="mb-3 row">
+              <div className="col-md-6">
+                <label htmlFor="author" className="form-label">Author</label>
+                <input type="text" className="form-control" id="author" name="author"/>
               </div>
-              <div class="col-md-5">
-                <label for="inputStar" class="form-label">Star Rating</label>
-                <select id="inputStar" class="form-select">
+              <div className="col-md-5">
+                <label htmlFor="stars" className="form-label">Star Rating</label>
+                <select id="stars" name="stars" className="form-select">
                   <option selected>Choose...</option>
                   <option>0.5</option>
                   <option>1.0</option>
@@ -91,16 +92,16 @@ function show (data) {
                   <option>5.0</option>
                 </select>
               </div>
-              <div class="col-md-1">
-                <div class="form-group">
-                  <label class="form-check-label" for="gridCheck">Rant?</label>
-                  <input class="form-check-input" type="checkbox" id="gridCheck"/>
+              <div className="col-md-1">
+                <div className="form-group">
+                  <label className="form-check-label" htmlFor="rant">Rant?</label>
+                  <input className="form-check-input" type="checkbox" id="rant" name="rant"/>
                 </div>
               </div>
             </div>
-            <div class="mb-3 row">
-              <div class="col-12">
-                <button type="submit" class="btn btn-primary">Add Comment</button>
+            <div className="mb-3 row">
+              <div className="col-12">
+                <button type="submit" className="btn btn-primary">Add Comment</button>
               </div>
             </div>
           </form>

@@ -14,6 +14,11 @@ router.get('/', (req, res) => {
     })
 })
 
+router.post('/:id/comment', (req, res) => {
+  console.log(req.body)
+  res.send('GET /places/:id/comment stub')
+})
+
 router.post('/', (req, res) => {
   if (!req.body.pic) req.body.pic = undefined
   db.Place.create(req.body)
@@ -43,7 +48,7 @@ router.get('/:id', (req, res) => {
   db.Place.findById(req.params.id)
   .populate('comments')
   .then(place => {
-    console.log(place.comments)
+    // console.log(place.comments)
     res.render('places/show', { place })
   })
   .catch(err => {
