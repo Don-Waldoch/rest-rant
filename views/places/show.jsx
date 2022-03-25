@@ -61,6 +61,49 @@ function show (data) {
             <h2>Comments</h2>
             {comments}
           </div>
+          <p></p><hr></hr>
+          <h2>Got Your Own Rant or Rave?</h2>
+          <form method="POST" action="/comment">
+            <div class="mb-3 row">
+              <div class="col-12">
+                <label for="inputComment" class="form-label">Comment</label>
+                <textarea type="text" class="form-control" id="inputComment" rows="2"/>
+              </div>
+            </div>
+            <div class="mb-3 row">
+              <div class="col-md-6">
+                <label for="inputAuthor" class="form-label">Author</label>
+                <input type="text" class="form-control" id="inputAuthor"/>
+              </div>
+              <div class="col-md-5">
+                <label for="inputStar" class="form-label">Star Rating</label>
+                <select id="inputStar" class="form-select">
+                  <option selected>Choose...</option>
+                  <option>0.5</option>
+                  <option>1.0</option>
+                  <option>1.5</option>
+                  <option>2.0</option>
+                  <option>2.5</option>
+                  <option>3.0</option>
+                  <option>3.5</option>
+                  <option>4.0</option>
+                  <option>4.5</option>
+                  <option>5.0</option>
+                </select>
+              </div>
+              <div class="col-md-1">
+                <div class="form-group">
+                  <label class="form-check-label" for="gridCheck">Rant?</label>
+                  <input class="form-check-input" type="checkbox" id="gridCheck"/>
+                </div>
+              </div>
+            </div>
+            <div class="mb-3 row">
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary">Add Comment</button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
       </main>
