@@ -2,7 +2,7 @@ const React = require('react')
 const Def = require('../default')
 
 function show (data) {
-  // console.log(data)
+  console.log(data.id)
   let image = (data.place.pic.match(/^images/)) ? `../${data.place.pic}` : data.place.pic
   let comments = (
     <h3 className="inactive">
