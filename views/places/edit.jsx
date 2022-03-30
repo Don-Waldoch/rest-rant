@@ -7,8 +7,8 @@ function edit_form (data) {
     <Def>
       <main>
         <div className="container">
-        <h1>Add a New Place</h1>
-        <form method="POST" action={`/places/${data.id}?_method=PUT`}>
+        <h1>Edit Place</h1>
+        <form method="POST" action={`/places/${data.place.id}?_method=PUT`}>
           <div className="row">
             <div className="form-group col-sm-6">
               <label htmlFor="name">Place Name</label>
@@ -29,9 +29,19 @@ function edit_form (data) {
               <input className="form-control" id="state" name="state" defaultValue={data.place.state} />
             </div>
           </div>
-          <div className="form-group">
-            <label htmlFor="cuisines">Cuisines</label>
-            <input className="form-control" id="cuisines" name="cuisines" defaultValue={data.place.cuisines} required />
+          <div className="row">
+          <div className="form-group col-sm-6">
+              <div className="form-group">
+                <label htmlFor="cuisines">Cuisines</label>
+                <input className="form-control" id="cuisines" name="cuisines" defaultValue={data.place.cuisines} required />
+              </div>
+            </div>
+            <div className="form-group col-sm-6">
+              <div className="form-group">
+                <label htmlFor="cuisines">Founded</label>
+                <input className="form-control" id="founded" name="founded" defaultValue={data.place.founded} required />
+              </div>
+            </div>
           </div>
           <br></br>
           <input className="btn btn-primary" type="submit" value="Save Place" />
