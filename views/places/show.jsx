@@ -2,7 +2,7 @@ const React = require('react')
 const Def = require('../default')
 
 function show (data) {
-  console.log(data.id)
+  // console.log(data.id)
   let image = (data.place.pic.match(/^images/)) ? `../${data.place.pic}` : data.place.pic
   let comments = (
     <h3 className="inactive">
@@ -98,16 +98,16 @@ function show (data) {
                 <label htmlFor="stars" className="form-label">Star Rating</label>
                 <select id="stars" name="stars" className="form-select">
                   <option selected>Choose...</option>
-                  <option>0.5</option>
-                  <option>1.0</option>
-                  <option>1.5</option>
-                  <option>2.0</option>
-                  <option>2.5</option>
-                  <option>3.0</option>
-                  <option>3.5</option>
-                  <option>4.0</option>
-                  <option>4.5</option>
-                  <option>5.0</option>
+                  <option value="0.5" key="0.5">0.5</option>
+                  <option value="1.0" key="1.0">1.0</option>
+                  <option value="1.5" key="1.5">1.5</option>
+                  <option value="2.0" key="2.0">2.0</option>
+                  <option value="2.5" key="2.5">2.5</option>
+                  <option value="3.0" key="3.0">3.0</option>
+                  <option value="3.5" key="3.5">3.5</option>
+                  <option value="4.0" key="4.0">4.0</option>
+                  <option value="4.5" key="4.5">4.5</option>
+                  <option value="5.0" key="5.0">5.0</option>
                 </select>
               </div>
               <div className="col-md-1">
